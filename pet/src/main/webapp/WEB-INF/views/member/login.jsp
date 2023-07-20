@@ -24,9 +24,7 @@ function frmCheck() {
 		$("#userpass").focus();                                                                                                                                                                         
 		return false;                                                                                                                                                                                 
 	}                                                                                                                                                                                               
-$("#loginform").click(function(){
-	alert("로그인 버튼 작동");
-});       
+$("#loginform").submit();       
 
 	}                                                                                                                                                                                                 
 </script>  
