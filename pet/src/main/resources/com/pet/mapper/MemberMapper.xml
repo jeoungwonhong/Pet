@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.pet.mapper.MemberMapper">
+	<insert id="memberJoin">
+  		insert into user values(#{userid}, #{userpass}, #{username}, #{useremail}, #{usertel}, 0)
+  	</insert>
+  	
+  	<!-- 로그인 -->
+  	<select id="memberLogin" resultType="com.pet.model.MemberVO">
+  		select userid, userpass, username, useremail, tel, level from user where userid = #{userid} and userpass = #{userpass}
+  	</select>
+  </mapper>
