@@ -7,25 +7,26 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>                                                                                                          
 <script type="text/javascript">                                                                                                                                                                   
 $(function(){                                                                                                                                                                                     
-var msg = "${msg}";                                                                                                                                                                             
-if(msg != ""){                                                                                                                                                                                  
-alert(msg);                                                                                                                                                                                      
-}                                                                                                                                                                                               
+	var msg = "${msg}";                                                                                                                                                                             
+	if(msg != ""){                                                                                                                                                                                  
+		alert(msg);                                                                                                                                                                                      
+		}                                                                                                                                                                                               
 });                                                                                                                                                                                               
                                                                                                                                                                                       
 function frmCheck() {                                                                                                                                                                             
-if ($("#userid").val() == "") {                                                                                                                                                                  
-alert("아이디를 입력해주세요.");                                                                                                                                                              
-$("#userid").focus();                                                                                                                                                                          
-return false;                                                                                                                                                                                 
-}                                                                                                                                                                                               
-if ($("#userpass").val() == "") {                                                                                                                                                                 
-alert("비밀번호를 입력해주세요.");                                                                                                                                                            
-$("#userpass").focus();                                                                                                                                                                         
-return false;                                                                                                                                                                                 
-}                                                                                                                                                                                               
-$("#loginform").submit();                                                                                                                                                                       
-}                                                                                                                                                                                                 
+	if ($("#userid").val() == "") {                                                                                                                                                                  
+		alert("아이디를 입력해주세요.");                                                                                                                                                              
+		$("#userid").focus();                                                                                                                                                                          
+		return false;                                                                                                                                                                                 
+	}                                                                                                                                                                                               
+	if ($("#userpass").val() == "") {                                                                                                                                                                 
+		alert("비밀번호를 입력해주세요.");                                                                                                                                                            
+		$("#userpass").focus();                                                                                                                                                                         
+		return false;                                                                                                                                                                                 
+	}                                                                                                                                                                                               
+$("#loginform").submit();       
+dsf
+	}                                                                                                                                                                                                 
 </script>  
 <meta charset="UTF-8">
 <title>Insert title here</title>
