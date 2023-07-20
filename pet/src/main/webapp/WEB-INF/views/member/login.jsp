@@ -25,7 +25,8 @@ function frmCheck() {
 		return false;                                                                                                                                                                                 
 	}                                                                                                                                                                                               
 $("#loginform").submit();       
-dsf
+	/* alert("전송"); */
+	
 	}                                                                                                                                                                                                 
 </script>  
 <meta charset="UTF-8">
@@ -37,12 +38,12 @@ dsf
 	<div class="">
         <h1>Login</h1>
     </div>
-    <form id="loginform" action="/member/login.do" method="post">
+    <form id="loginform" action="/member/login" method="post">
     <c:if test="${not empty rememberCookie.getValue()}">
     	<c:set value="checked" var="checked"/>
     </c:if>
-        <div><span>ID : </span><input type="text" id="userid" value="${rememberCookie.getValue()}"/></div>
-        <div><span>PW : </span><input type="text" id="userpass"/></div>
+        <div><span>ID : </span><input type="text" name="userid" value="${rememberCookie.getValue()}"/></div>
+        <div><span>PW : </span><input type="password" name="userpass"/></div>
         <div>
         	<div>
         		<input type="checkbox" id="customCheck" value="true" ${checked }/>
@@ -62,7 +63,7 @@ dsf
         	<a href="#" onclick="return frmCheck();">로그인</a>
         </div>
         
-        <!-- SNS Login 동그란 모양을 로고 넣어주세요 -->
+        <!-- 소셜 Login 동그란 모양을 로고 넣어주세요 -->
         <div>
 	        <a href="#">N</a>
 	        <a href="#">K</a>
