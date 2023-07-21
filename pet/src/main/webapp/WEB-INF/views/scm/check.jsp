@@ -10,9 +10,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<header>
+    <header>
         <div class="logo">
-            <a href="adminmain.html">LOGO</a>
+            <a href="/scm/adminmain">LOGO</a>
         </div>
         <div class="b_scm_title">
             안녕하세요.
@@ -21,17 +21,17 @@
         </div>
         <nav>
             <ul class="gnb">
-                <li><a href="?fname=calculate">정산관리</a></li>
-                <li><a href="?fname=product">상품관리</a></li>
+               <li><a href="/scm/calculate">정산관리</a></li>
+                <li><a href="/scm/product">상품관리</a></li>
                 <li><a href="">예약관리</a>
                     <ul class="lnb">
-                        <li><a href="?fname=order">예약주문</a></li>
-                        <li><a href="?fname=check">예약확인</a></li>
-                        <li><a href="?fname=completion">예약완료</a></li>
+                        <li><a href="/scm/order">예약주문</a></li>
+                        <li><a href="/scm/check">예약확인</a></li>
+                        <li><a href="/scm/completion">예약완료</a></li>
                     </ul>
                 </li>
-                <li><a href="?fname=qna">Q&A관리</a></li>
-                <li><a href="fname=review">리뷰관리</a></li>
+                <li><a href="/scm/q&a">Q&A관리</a></li>
+                <li><a href="/scm/review">리뷰관리</a></li>
             </ul>
         </nav>
     </header>
