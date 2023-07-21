@@ -4,16 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
- <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
- <link rel="stylesheet" href="/resources/css/bootstrap.css">
- <link rel="stylesheet" href="/resources/css/scm-style.css"> 
-<title>상품관리 </title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/css/bootstrap.css">
+<link rel="stylesheet" href="/resources/css/scm-style.css">
+<title>Insert title here</title>
 </head>
 <body>
- <header>
+<header>
         <div class="logo">
-            <a href="?fname=adminmain">LOGO</a>
+            <a href="adminmain.html">LOGO</a>
         </div>
         <div class="b_scm_title">
             안녕하세요.
@@ -40,7 +39,7 @@
             <div class="container">
             <div class="b_scm_content">
                 <div class="lmember">
-                    <h1 class="pt-5 mb-3 text-center">상품관리</h1>
+                    <h1 class="pt-5 mb-3 text-center">예약확인</h1>
                     <div class="datelist">
                         <input  class="datepicker" id="startDate" style="margin-left: 300px;" />
                         <p style="font-size: 20px; margin-top: 15px; margin-left: 10px; margin-right: 10px;">~</p>
@@ -53,67 +52,46 @@
                             <button style="border-radius: 10px; font-size: 20px; background-color: #f3e3d0;">검색</button>
                         </div>
                     </div>
-                    <div class="search-container">
-                        <input type="text" class="search-input" placeholder="검색어를 입력하세요">
-                       <a href="?fname=search"><button type="submit" class="search-button" style="padding-bottom: 10px;">
-                     <i class="fas fa-search search-icon"></i>		
-                       </button></a>
-                    </div>
                     <div class="row">
                         <table class="table  memberstbl">
                             <thead>
                                 <tr>
                                     <th>번호</th>
-                                    <th>코드번호</th>
-                                    <th>반려동물이미지</th>
-                                    <th>상품명 </th>
-                                    <th>상품가격 </th>
-                                    <th>상태</th>
-                                    <th>상품등록날짜</th>
+                                    <th>예약자명</th>
+                                    <th>동물타입</th>
+                                    <th>무게</th>
+                                    <th>동물 수</th>
+                                    <th>동물 정보</th>
+                                    <th>룸 이름</th>
+                                    <th>체크인</th>
+                                    <th>체크아웃</th>
+                                    <th>금액</th>
+                                    <th>예약확인</th>
+            
                                 </tr>
                             </thead>
                             <tbody>
                 
                     <tr>
-                        <td class="b-list">1</td>
-                        <td class="b-list">2343</td>
-                        <td class="b-list"><img src="./img/imgma.jpg" alt="도마뱀"></td>
-                        <td class="b-list">은비네 자온조 사육장</td>
-                        <td class="b-list">300,000원</td>
-                        <td class="b-list">
-                            
-                            
-                            <span class="badge bg-primary px-4 py-2">옵션 </span>
+                        <td>1</td>
+                        <td>윤베리</td>
+                        <td>크레스티드게코</td>
+                        <td>54g</td>
+                        <td>1마리</td>
+                        <td>벽을 타고 다녀요</td>
+                        <td>은비네 유리사육장</td>
+                        <td></td>
+                        <td></td>
+                        <td>300,000원</td>
+                        <td>
                             <select name="level" class="level" onchange="memAddr(this, );">
-                                <option value="0" >판매중</option>
-                                <option value="1"  >일시품절 </option> 
+                                <option value="0" >확인</option>
+                                <option value="1"  >취소</option> 
                             </select>
                             
                         </td>
-                        <td class="b-list">2023.04.20</td>
                     </tr>
-                    <tr>
-                        <td class="b-list">2</td>
-                        <td class="b-list">23453</td>
-                        <td class="b-list"><img src="./img/va.jpg" alt="도마뱀"></td>
-                        <td class="b-list">은비네 유리사육장</td>
-                        <td class="b-list">200,000원</td>
-                        <td class="b-list">
-                            
-                            
-                            <span class="badge bg-primary px-4 py-2">옵션 </span>
-                            <select name="level" class="level" onchange="memAddr(this, );">
-                                <option value="0" >판매중</option>
-                                <option value="1"  >일시품절 </option> 
-                            </select>
-                            
-                        </td>
-                        <td class="b-list">2023.06.18</td>
-                    </tr>
-                    
-                
-                        </tbody>
-                            
+                        </tbody>   
                         </table>
                     </div> <!-- /row -->
                     <div class="mt-3 mb-5 row ">
@@ -132,7 +110,7 @@
         <div class="cright">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
     </footer>
 
-    
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>    
 <script src="/resources/js/scm-script.js"></script>
