@@ -1,12 +1,12 @@
 $("#userid").blur(function(){
-    	var scm_id = $("#userid").val();
-    	if(scm_id == "" || scm_id.length < 4){
-    		$(".successIdChk").text("이름은 4자 이상 20자 이하로 설정해주세요 :)");
+    	var scmid = $("#userid").val();
+    	if(scmid == "" || scmid.length < 4 || scmid.length > 20){
+    		$(".successIdChk").text("아이디는 4자 이상 20자 이하로 설정해주세요.");
 			$(".successIdChk").css("color", "#d43915");
 			$("#idDoubleChk").val("false");
     	}else{
     		$.ajax({
-				url : '${pageContext.request.contextPath}/idCheck?scm_id='+ scm_id,
+				url : '/scm/scmJoin?userid='+ scmid,
 				type : 'post',
 				cache : false,
 				success : function(data) {
