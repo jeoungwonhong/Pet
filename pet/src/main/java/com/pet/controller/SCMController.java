@@ -16,6 +16,12 @@ public class SCMController {
 	private static final Logger logger = LoggerFactory.getLogger(SCMController.class);
 	
 	//main 페이지 이동
+	@RequestMapping(value = "scmJoin", method = RequestMethod.GET)
+	public void ScmJoinGET() {
+		logger.info("scmJoin");
+	}
+	
+	//main 페이지 이동
 	@RequestMapping(value = "adminmain", method = RequestMethod.GET)
 	public void MainGET() {
 		logger.info("adminmain");
