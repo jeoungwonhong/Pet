@@ -1,13 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="java.util.*"%>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
- <link rel="stylesheet" href="/resources/css/bootstrap.css">
- <link rel="stylesheet" href="/resources/css/scm-style.css"> 
+ <link rel="stylesheet" href="${path}/resources/css/bootstrap.css">
+ <link rel="stylesheet" href="${path}/resources/css/scm-style.css"> 
 </head>
 <body>
      <header>
@@ -130,6 +133,6 @@
     
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>    
-<script src="/resources/js/scm-script.js"></script>
+<script src="${path}/resources/js/scm-script.js"></script>
 </body>
 </html>

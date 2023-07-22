@@ -66,7 +66,7 @@
                                 <tr>
                                     <td class="list">1</td>
                                     <td class="list">000</td>
-                                    <td class="list"><a href="?fname=review2">0000</a></td>
+                                    <td class="list"><a href="/scm/review2">0000</a></td>
                                     <td class="list">2023.04.20</td>
                                     <td class="list">0</td>
                                 </tr>
