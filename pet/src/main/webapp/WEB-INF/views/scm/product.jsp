@@ -1,13 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="java.util.*"%>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
- <link rel="stylesheet" href="/resources/css/bootstrap.css">
- <link rel="stylesheet" href="/resources/css/scm-style.css"> 
+ <link rel="stylesheet" href="${path}/resources/css/bootstrap.css">
+ <link rel="stylesheet" href="${path}/resources/css/scm-style.css"> 
 </head>
 <body>
      <header>
@@ -76,13 +79,11 @@
                     <tr>
                         <td class="b-list">1</td>
                         <td class="b-list">2343</td>
-                        <td class="b-list"><img src="./img/imgma.jpg" alt="도마뱀"></td>
+                        <td class="b-list"><img src="/resources/img/imgma.jpg" alt="도마뱀"></td>
                         <td class="b-list">은비네 자온조 사육장</td>
                         <td class="b-list">300,000원</td>
                         <td class="b-list">
-                            
-                            
-                            <span class="badge bg-primary px-4 py-2">옵션 </span>
+                           
                             <select name="level" class="level" onchange="memAddr(this, );">
                                 <option value="0" >판매중</option>
                                 <option value="1"  >일시품절 </option> 
@@ -94,13 +95,11 @@
                     <tr>
                         <td class="b-list">2</td>
                         <td class="b-list">23453</td>
-                        <td class="b-list"><img src="./img/va.jpg" alt="도마뱀"></td>
+                        <td class="b-list"><img src="/resources/img/va.jpg" alt="도마뱀"></td>
                         <td class="b-list">은비네 유리사육장</td>
                         <td class="b-list">200,000원</td>
                         <td class="b-list">
                             
-                            
-                            <span class="badge bg-primary px-4 py-2">옵션 </span>
                             <select name="level" class="level" onchange="memAddr(this, );">
                                 <option value="0" >판매중</option>
                                 <option value="1"  >일시품절 </option> 
@@ -134,6 +133,6 @@
     
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>    
-<script src="/resources/js/scm-script.js"></script>
+<script src="${path}/resources/js/scm-script.js"></script>
 </body>
 </html>

@@ -23,6 +23,12 @@ public class SCMController {
 	
 
 	//main 페이지 이동
+	@RequestMapping(value = "scmJoin", method = RequestMethod.GET)
+	public void ScmJoinGET() {
+		logger.info("scmJoin");
+	}
+	
+	//main 페이지 이동
 	@RequestMapping(value = "adminmain", method = RequestMethod.GET)
 	public void MainGET() {
 		logger.info("adminmain");
@@ -61,10 +67,20 @@ public class SCMController {
 	public void QnAGET() {
 		logger.info("q&a");
 	}
+	//QnA Info페이지 이동
+	@RequestMapping(value = "q&a2", method = RequestMethod.GET)
+	public void QnA2GET() {
+		logger.info("q&a2");
+	}
 	//review 페이지 이동
 	@RequestMapping(value = "review", method = RequestMethod.GET)
 	public void ReviewGET() {
 		logger.info("review");
+	}
+	//review Info 페이지 이동
+	@RequestMapping(value = "review2", method = RequestMethod.GET)
+	public void Review2GET() {
+		logger.info("review2");
 	}
 	
 	
