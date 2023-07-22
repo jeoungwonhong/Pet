@@ -76,13 +76,11 @@
                     <tr>
                         <td class="b-list">1</td>
                         <td class="b-list">2343</td>
-                        <td class="b-list"><img src="./img/imgma.jpg" alt="도마뱀"></td>
+                        <td class="b-list"><img src="/resources/img/imgma.jpg" alt="도마뱀"></td>
                         <td class="b-list">은비네 자온조 사육장</td>
                         <td class="b-list">300,000원</td>
                         <td class="b-list">
-                            
-                            
-                            <span class="badge bg-primary px-4 py-2">옵션 </span>
+                           
                             <select name="level" class="level" onchange="memAddr(this, );">
                                 <option value="0" >판매중</option>
                                 <option value="1"  >일시품절 </option> 
@@ -94,13 +92,11 @@
                     <tr>
                         <td class="b-list">2</td>
                         <td class="b-list">23453</td>
-                        <td class="b-list"><img src="./img/va.jpg" alt="도마뱀"></td>
+                        <td class="b-list"><img src="/resources/img/va.jpg" alt="도마뱀"></td>
                         <td class="b-list">은비네 유리사육장</td>
                         <td class="b-list">200,000원</td>
                         <td class="b-list">
                             
-                            
-                            <span class="badge bg-primary px-4 py-2">옵션 </span>
                             <select name="level" class="level" onchange="memAddr(this, );">
                                 <option value="0" >판매중</option>
                                 <option value="1"  >일시품절 </option> 
