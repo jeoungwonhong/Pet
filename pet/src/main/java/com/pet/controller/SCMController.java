@@ -49,7 +49,7 @@ public class SCMController {
 	//order 페이지 이동
 	@RequestMapping(value = "order", method = RequestMethod.GET)
 	public void OrderGET() {
-		logger.info("order");
+		logger.info("order 페이지 진입");
 	}
 	
 	//check 페이지 이동
@@ -62,7 +62,7 @@ public class SCMController {
 	public void CompletionGET() {
 		logger.info("completion");
 	}
-	//QnA 페이지 이동
+	//QnA 페이지 이동	
 	@RequestMapping(value = "q&a", method = RequestMethod.GET)
 	public void QnAGET() {
 		logger.info("q&a");
