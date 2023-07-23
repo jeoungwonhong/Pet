@@ -62,15 +62,17 @@
                                     <th>조회</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="list">1</td>
-                                    <td class="list">000</td>
-                                    <td class="list"><a href="/scm/review2">0000</a></td>
-                                    <td class="list">2023.04.20</td>
-                                    <td class="list">0</td>
-                                </tr>
-                        </tbody>
+                            <c:forEach items="${list}" var=list>
+					            <tr>
+					            	<a href="/scm/review2">
+						                <td class="list"><c:out value="${list.num}"/></td>
+						                <td class="list"><c:out value="${list.userid}"/></td>
+						                <td class="list"><c:out value="${list.subject}"/></td>
+						                <td class="list"><c:out value="${list.wdate}"/></td>
+						                <td class="list"><c:out value="${list.star}"/></td>
+					                </a>
+					            </tr>
+					        </c:forEach>
                         </table>
                     </div> <!-- /row -->
             </div>

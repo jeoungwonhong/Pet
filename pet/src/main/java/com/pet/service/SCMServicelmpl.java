@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.pet.mapper.ReviewMapper;
 import com.pet.model.ReservationVO;
 import com.pet.model.ReviewVO;
 
@@ -13,6 +14,9 @@ public class SCMServicelmpl implements SCMService {
 	
 	@Autowired
 	SCMService scmservice;
+	
+	@Autowired
+	ReviewMapper reMapper;
 	
 	//예약
 	@Override
@@ -25,17 +29,10 @@ public class SCMServicelmpl implements SCMService {
 	public int reservationCon(int condition) throws Exception{
 		return scmservice.reservationCon(condition);
 	}
-	
-	// 리뷰 상세페이지
+
+	// 리뷰 목록
 	@Override
-    public ReviewVO info(Integer num) throws Exception {
-        return scmservice.info(num);
-    }
-	
-	// 리뷰 리스트 
-	@Override
-	public List<ReviewVO> listAll() throws Exception {
-        return scmservice.listAll();
-    }
-    
+	public List<ReviewVO> getList() {
+		return reMapper.getList();
+	}
 }
