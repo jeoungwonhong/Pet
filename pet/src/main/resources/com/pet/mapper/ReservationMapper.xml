@@ -9,6 +9,6 @@
   </insert>
 
 	<select id = "reservationCon" resultType = "int">
-		select count(*) from reservation where condition = ${condition}
+		select count(*) from reservation where condition = 0;
 	</select>
   </mapper>
