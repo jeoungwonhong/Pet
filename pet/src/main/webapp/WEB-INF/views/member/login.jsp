@@ -54,7 +54,7 @@ $("#loginform").submit();
         <!-- 여기 dispaly="flex"해서 나란히 놔주세요 -->
         <div>
         	<div><a href="#">ID·PW찾기</a></div>
-        	<div><a href="#">회원가입</a></div>
+        	<div><a href="joinagree">회원가입</a></div>
         </div>
         
         <!--------------------------------------->

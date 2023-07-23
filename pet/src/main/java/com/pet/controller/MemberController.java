@@ -30,13 +30,18 @@ public class MemberController {
 		logger.info("로그인 페이지 진입");
 	}
 	
-	//회원가입 페이지 이동
-		@RequestMapping(value = "join", method = RequestMethod.GET)
-		public void joinGET() {
-			
+	//회원가입 페이지 이동(약관동의)
+		@RequestMapping(value = "joinagree", method = RequestMethod.GET)
+		public void joinagreeGET() {
 			logger.info("회원가입 페이지 진입");
-			
 		}
+	
+	//회원가입 페이지 이동
+			@RequestMapping(value = "join", method = RequestMethod.GET)
+			public void joinGET() {
+				logger.info("회원가입 페이지 진입");
+			}
+		
 		
 	//회원가입
 		@RequestMapping(value="/join", method=RequestMethod.POST)
@@ -52,6 +57,7 @@ public class MemberController {
 			return "redirect:/main";
 			
 		}
+		
 		
 	// 아이디 중복 검사
 		@RequestMapping(value = "/memberIdChk", method = RequestMethod.POST)
@@ -96,6 +102,8 @@ public class MemberController {
 			
 			return "redirect:/main";
 		}
+		
+		
 		/* 메인페이지 로그아웃 */
 		@RequestMapping(value="logout.do", method=RequestMethod.GET)
 		public String logoutMainGET(HttpServletRequest request) throws Exception{
