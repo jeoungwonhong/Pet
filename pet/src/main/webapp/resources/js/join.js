@@ -1,89 +1,60 @@
 /**
  * 
  */
+function validateForm() {
+    var userid = $("#userid").val();
+    var userpass = $("#userpass").val();
+    var pwck_input = $(".pwck_input").val();
+    var username = $("#username").val();
+    var useremail = $("#useremail").val();
+    var tel = $("#tel").val();
+     var verificationCode = $("#verification_code").val();
 
-/****************************join - jeon - start***********************************/
- $(document).ready(function() {
-        $("#userid").on("input", validateForm);
-        $("#userpass").on("input", validateForm);
-        $(".pwck_input").on("input", validateForm);
-        $("#username").on("input", validateForm);
-        $("#useremail").on("input", validateForm);
-        $("#tel").on("input", validateForm);
-        validateForm();
-    });
-
-    function validateForm() {
-        var isValid = true;
-        isValid = checkUserid() && isValid;
-        isValid = checkPassword() && isValid;
-        isValid = checkPasswordMatch() && isValid;
-        isValid = checkName() && isValid;
-        isValid = checkEmail() && isValid;
-        isValid = checkTel() && isValid;
-        
-        var isAllValid = (
-            !$(".final_id_ck").is(":visible") &&
-            !$(".final_pw_ck").is(":visible") &&
-            !$(".final_pwck_ck").is(":visible") &&
-            !$(".final_name_ck").is(":visible") &&
-            !$(".final_email_ck").is(":visible") &&
-            !$(".final_tel_ck").is(":visible")
-        );
-
-        if (isAllValid) {
-            $(".join_button").prop("disabled", false);
-        } else {
-            $(".join_button").prop("disabled", true);
-        }
-
-        return isValid;
-    }
-
-    function join() {
-        var isValid = validateForm();
-        var isAllValid = (
-            !$(".final_id_ck").is(":visible") &&
-            !$(".final_pw_ck").is(":visible") &&
-            !$(".final_pwck_ck").is(":visible") &&
-            !$(".final_name_ck").is(":visible") &&
-            !$(".final_email_ck").is(":visible") &&
-            !$(".final_tel_ck").is(":visible")
-        );
-
-        if (isAllValid) {
-            alert("회원가입이 완료되었습니다!");
-        } else {
-            alert("입력한 정보를 다시 확인해주세요.");
-        }
-    }
+    // 각 입력 필드에 대한 개별적인 유효성 검사 수행
+    var isUseridValid = checkUserid(); // 아이디 유효성 검사
+    var isUserpassValid = checkPassword(); // 비밀번호 유효성 검사
+    var isPwckInputValid = checkPasswordMatch(); // 비밀번호 확인 일치 여부 검사
+    var isUsernameValid = checkName(); // 이름 유효성 검사
+    var isUseremailValid = checkEmail(); // 이메일 유효성 검사
+    var isTelValid = checkTel(); // 휴대폰 번호 유효성 검사
+     var isVerificationCodeValid = verifyVerificationCode();
 
 
-// 회원가입 버튼 클릭 시 실행되는 함수
-function join() {
-    // 모든 필드에 대한 유효성 검사 수행
-    var isValid = validateForm();
+    // 개별적인 유효성 검사 결과를 콘솔에 출력
+    console.log("아이디 유효성 검사:", isUseridValid);
+    console.log("비밀번호 유효성 검사:", isUserpassValid);
+    console.log("비밀번호 확인 일치 여부 검사:", isPwckInputValid);
+    console.log("이름 유효성 검사:", isUsernameValid);
+    console.log("이메일 유효성 검사:", isUseremailValid);
+    console.log("휴대폰 번호 유효성 검사:", isTelValid);
+    console.log("인증번호 유효성 검사:", isVerificationCodeValid);
 
-    // 모든 검사가 통과되었는지 확인
-    var isAllValid = (
-        !$(".final_id_ck").is(":visible") &&
-        !$(".final_pw_ck").is(":visible") &&
-        !$(".final_pwck_ck").is(":visible") &&
-        !$(".final_name_ck").is(":visible") &&
-        !$(".final_email_ck").is(":visible") &&
-        !$(".final_tel_ck").is(":visible")
-    );
 
-    // 모든 검사가 통과되었을 때만 회원가입 수행
-    if (isAllValid) {
-        // 회원가입 수행하는 코드를 여기에 추가
-        alert("회원가입이 완료되었습니다!");
+    // 모든 입력 필드가 유효하면 폼 제출 허용
+    if (
+        userid !== "" &&
+        userpass !== "" &&
+        pwck_input !== "" &&
+        username !== "" &&
+        useremail !== "" &&
+        tel !== "" &&
+        verificationCode !== "" &&
+        isUseridValid &&
+        isUserpassValid &&
+        isPwckInputValid &&
+        isUsernameValid &&
+        isUseremailValid &&
+        isTelValid &&
+        (document.querySelector(".final_verification_code_ck").style.display === "block")
+        ) {
+        return true; // 모든 입력 필드가 유효하면 폼 제출 허용
     } else {
-        // 유효성 검사에 실패한 부분에 대한 안내 메시지를 표시
-        alert("입력한 정보를 다시 확인해주세요.");
+        alert("모든 입력 칸을 채워주세요.");
+        return false; // 적어도 하나의 입력 필드가 비어있거나 유효하지 않으면 폼 제출 방지
     }
 }
-        
+
+
 function checkUserid() {
     var userid = $("#userid").val();
     var usernamePattern = /^[a-zA-Z0-9]{8,20}$/;
@@ -93,37 +64,43 @@ function checkUserid() {
         $(".id_input_re_2").hide();
         $(".id_input_re_3").hide();
         $(".final_id_ck").show();
-        $(".join_button").prop("disabled", true);
+        return Promise.resolve(false);
     } else if (!usernamePattern.test(userid)) {
         $(".id_input_re_1").hide();
         $(".id_input_re_2").hide();
         $(".id_input_re_3").show();
         $(".final_id_ck").hide();
-        $(".join_button").prop("disabled", true);
+        return Promise.resolve(false);
     } else {
         $(".id_input_re_1").hide();
         $(".id_input_re_2").hide();
         $(".id_input_re_3").hide();
         $(".final_id_ck").hide();
-        
-        $.ajax({
-            type: "post",
-            url: "/member/memberIdChk",
-            data: { userid: userid },
-            success: function(result) {
-                console.log("성공 여부: " + result);
 
-                if (result === "success") {
-                    $(".id_input_re_1").show();
-                    $(".id_input_re_2").hide();
-                } else {
-                    $(".id_input_re_1").hide();
-                    $(".id_input_re_2").show();
+        // 프로미스를 사용하여 서버와 통신 비동기 처리
+        return new Promise(function(resolve, reject) {
+            $.ajax({
+                type: "post",
+                url: "/member/memberIdChk",
+                data: { userid: userid },
+                success: function(result) {
+                    console.log("성공 여부: " + result);
+
+                    if (result === "success") {
+                        $(".id_input_re_1").show();
+                        $(".id_input_re_2").hide();
+                        resolve(true);
+                    } else {
+                        $(".id_input_re_1").hide();
+                        $(".id_input_re_2").show();
+                        resolve(false);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("에러 발생: " + error);
+                    resolve(false);
                 }
-            },
-            error: function(xhr, status, error) {
-                console.error("에러 발생: " + error);
-            }
+            });
         });
     }
 }
@@ -155,6 +132,9 @@ function checkPassword() {
     // 모든 조건에 오류가 없을 때만 오류 메시지를 숨깁니다.
     if (passwordPattern1.test(password) && passwordPattern2.test(password) && passwordPattern3.test(password)) {
         $(".final_pw_ck").hide();
+        return true;
+    } else {
+        return false;
     }
 }
 
@@ -168,14 +148,17 @@ function checkPasswordMatch() {
         $(".pwck_input_re_1").hide();
         $(".pwck_input_re_2").hide();
         $(".final_pwck_ck").hide();
+        return false;
     } else if (password !== passwordConfirmation) {
         $(".pwck_input_re_1").hide();
         $(".pwck_input_re_2").show();
         $(".final_pwck_ck").show();
+        return false;
     } else {
         $(".pwck_input_re_1").show();
         $(".pwck_input_re_2").hide();
         $(".final_pwck_ck").hide();
+        return true;
     }
 }
 
@@ -185,8 +168,10 @@ function checkName() {
 
             if (namePattern.test(name)) {
                 $(".final_name_ck").hide();
+                return true;
             } else {
                 $(".final_name_ck").show();
+                return false;
             }
         }
         
@@ -197,14 +182,16 @@ function checkEmail() {
     if (email === "") {
         $(".check_email").hide();
         $(".final_email_ck").show();
-        $(".join_button").prop("disabled", true); // 이메일이 비어있으면 회원가입 버튼 비활성화
+        return false;
+        
     } else if (emailPattern.test(email)) {
         $(".check_email").hide();
         $(".final_email_ck").hide();
+        return true;
     } else {
         $(".check_email").show();
         $(".final_email_ck").hide();
-        $(".join_button").prop("disabled", true); // 이메일이 유효하지 않으면 회원가입 버튼 비활성화
+        return false;
     }
 }
 
@@ -215,20 +202,88 @@ function checkTel() {
     if (tel === "") {
         $(".check_tel").hide();
         $(".final_tel_ck").show();
-        $(".join_button").prop("disabled", true); // 휴대폰 번호가 11자리가 아니면 회원가입 버튼 비활성화
+        return false;
     } else {
         $(".final_tel_ck").hide();
         if (telPattern.test(tel)) {
             $(".check_tel").hide();
+            return true;
         } else {
             $(".check_tel").show();
-            $(".join_button").prop("disabled", true); // 휴대폰 번호가 11자리가 아니면 회원가입 버튼 비활성화
+            return false;
         }
     }
     
 }
         
-        
-        
+ function sendVerificationCode() {
+    var telInput = document.getElementById("tel");
+    var tel = telInput.value;
+    
+    // TODO: 휴대폰 번호 유효성 검사 수행 (checkTel() 함수 호출 등)
+
+    // Ajax를 이용하여 서버에 휴대폰 번호 전송
+    $.ajax({
+        type: "GET",
+        url: "/sendVerificationCode", // 서버의 컨트롤러 URL
+        data: { tel: tel }, // 전달할 데이터 (휴대폰 번호)
+        success: function(response) {
+            // 서버로부터 인증번호를 받아온 경우
+            if (response.success) {
+                var messageSpan = document.querySelector(".codemessege");
+                messageSpan.style.display = "block";
+                messageSpan.textContent = "인증번호가 발송되었습니다. 인증번호를 입력해주세요.";
+                return true;
+            } else {
+                var errorSpan = document.querySelector(".codemessege");
+                errorSpan.style.display = "block";
+                errorSpan.textContent = "인증번호 발송에 실패했습니다. 다시 시도해주세요.";
+                return false;
+            }
+        },
+        error: function(xhr, status, error) {
+            alert("서버와의 통신에 문제가 발생했습니다. 다시 시도해주세요.");
+            return false;
+        }
+    });
+}
+
+function verifyVerificationCode() {
+    return new Promise(function(resolve, reject) {
+        var verificationCodeInput = document.getElementById("verification_code");
+        var userInput = verificationCodeInput.value;
+
+        // 입력값이 비어있는 경우 처리
+        if (userInput === "") {
+            document.querySelector(".check_verification_code").style.display = "block";
+            document.querySelector(".final_verification_code_ck").style.display = "none";
+            reject(new Error("인증번호를 입력해주세요."));
+            return;
+        }
+
+        // Ajax를 이용하여 서버에 인증번호 확인 요청
+        $.ajax({
+            type: "POST",
+            url: "/verifyVerificationCode",
+            data: { verificationCode: userInput },
+            success: function(response) {
+                // 서버에서 인증번호 일치 여부를 받은 경우
+                if (response.success) {
+                    document.querySelector(".check_verification_code").style.display = "none";
+                    document.querySelector(".final_verification_code_ck").style.display = "block";
+                    resolve(true); // 인증번호 유효성 검사 결과를 프로미스에 전달
+                } else {
+                    document.querySelector(".check_verification_code").style.display = "block";
+                    document.querySelector(".final_verification_code_ck").style.display = "none";
+                    reject(new Error("인증번호가 올바르지 않습니다."));
+                }
+            },
+            error: function(xhr, status, error) {
+                alert("서버와의 통신에 문제가 발생했습니다. 다시 시도해주세요.");
+                reject(new Error("서버와의 통신에 문제가 발생했습니다."));
+            }
+        });
+    });
+}      
  
 /****************************join - jeon - end***********************************/ 
