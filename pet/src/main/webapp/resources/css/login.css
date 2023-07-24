@@ -1,0 +1,243 @@
+*{box-sizing: border-box;}
+
+header{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: #888;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.p-logo{
+    width: 150px;
+    height: auto;
+}
+.m-logo{
+    display: none;
+}
+.login{
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+.m-login{display: none;}
+
+/* 모바일 */
+@media (max-width: 500px) {
+    .p-logo{
+        display: none;
+    }
+    .m-logo{
+        display: block;
+        width: 40px;
+    }
+    .login{
+        margin-top: 10px;
+        display: none;
+    }
+    .m-login{
+        display: block;
+    }
+    .m-login img{
+        width: 35px;
+        height: 35px;
+    }
+    /**login**/
+    .login-banner{
+        display: none;
+    }
+    .bee-password i{
+        bottom: 10px;
+        left: 150px;
+    }
+}
+
+/*login**/
+.login-container{
+    display: flex;
+}
+.login-container img{
+    width: 50%;
+}
+.p-login{
+    width: 960px;
+    text-align: center;
+    margin: 130px 0;
+}
+.p-login h1{
+    font-size: 30px;
+    font-weight: 400;
+}
+.bee-login-1 {
+	width: 345px;
+	height: 54px;
+	margin-top: 20px;
+	background-color: #F27405;
+	color: #fff;
+	font-size:20px;
+    border: none;
+    border-radius: 13px;
+}
+.bee-login-1:hover{
+	background-color:#a1a0a0;
+}
+.login-conta{
+	width:400px;
+	margin-left: auto;
+    margin-right: auto;
+	
+}
+.bee-username,
+.bee-password{
+    width: 200px;
+    
+}
+.bee-username:focus,
+.bee-password:focus{
+    outline: none;
+    border: none;
+}
+.login-id,
+.login-pass{
+    width: 345px;
+    height: 54px;
+    border: 1px solid #a1a0a0;
+    vertical-align: middle;
+    border-radius: 15px;
+}
+.login-id:hover,
+.login-pass:hover{
+    outline: 1px solid #F27405;
+}
+.login-id input,
+.login-pass input{
+    outline: none;
+    border: none;
+    margin-left: -90px;
+    width: 200px;
+    margin-top: 18px;
+}
+
+.login-pass span{
+    color: #D43915;
+    position: absolute; 
+    left: 22px;
+    padding: 0 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.login-id span{
+    color: #D43915;
+    position: absolute; 
+    right: 276px;
+    padding: 0 5px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+.b-regi{
+    width: 280px;
+    display: flex;
+    text-align: center;
+    margin-left: 60px;
+}
+.b-regi p{
+    font-size: 15px;
+    color: #a1a0a0;
+    padding-right: 10px;
+}
+.b-regi a{
+    color: #000;
+    margin-top: 13px;
+}
+.huid{
+    padding-right: 160px;
+    color: #a1a0a0;
+
+}
+.huid-s{
+    height: 19px;
+    position: relative;
+}
+.huid-s span{
+    position: absolute;
+    bottom: -1px;
+    width: 70px;
+}
+/***snslogin***/
+.snslogin{
+    display: flex;
+    margin-left: 120px;
+}
+.snslogin a{
+    padding-right: 20px;
+}
+.snslogin img{
+    width: 40px;
+    height: 40px;
+}
+
+/****************consent**********************/
+.p-con{
+    width: 345px;
+    height: 425px;
+    margin: 130px auto;
+
+}
+.p-con h1{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.p-consent-row p{
+    font-size: 18px;
+}
+.p-consent-check label {
+    display: block;
+    color: #a1a0a0;
+}
+.agree-content{
+    font-size: 11px;
+    float: right;
+    color: #a1a0a0;
+    cursor: pointer;
+}
+.p-consent-check label{
+    margin-bottom: 10px;
+}
+.b-next{
+    width: 280px;
+    display: flex;
+    text-align: center;
+    margin-left: 60px;
+}
+.b-next p{
+    font-size: 15px;
+    color: #a1a0a0;
+    padding-right: 10px;
+}
+.b-next a{
+    color: #000;
+    margin-top: 13px;
+}
+.bee-next-1 {
+	width: 345px;
+	height: 54px;
+	margin-top: 20px;
+	background-color: #a1a0a0;
+	color: #fff;
+	font-size:20px;
+    border: none;
+    border-radius: 13px;
+    cursor: not-allowed;
+}
