@@ -1,12 +1,20 @@
 package com.pet.controller;
 
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.pet.model.ReservationVO;
 import com.pet.service.SCMService;
 
 /**
@@ -51,6 +59,19 @@ public class SCMController {
 	public void OrderGET() {
 		logger.info("order 페이지 진입");
 	}
+	
+	//order 페이지 컨디션 바꿔주는 작업
+	@ResponseBody
+	@RequestMapping(value = "/reservationOrder", method = RequestMethod.GET)
+	public void reservationOrder(HttpServletRequest req) {
+		logger.info("order 페이지 진입");
+		String businesscode = req.getParameter("businesscode");
+		int condition = Integer.parseInt(req.getParameter("condition"));
+		ReservationVO vo = new ReservationVO();
+		
+					
+	}
+	
 	
 	//check 페이지 이동
 	@RequestMapping(value = "check", method = RequestMethod.GET)

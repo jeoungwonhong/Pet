@@ -20,10 +20,22 @@ public class SCMServicelmpl implements SCMService {
 		scmservice.reservation(reservation);
 	}
 	
-	//예약 condition변경
+	//예약 order condition변경
 	@Override
-	public int reservationCon(int condition) throws Exception{
-		return scmservice.reservationCon(condition);
+	public int reservationOrder(String businesscode) throws Exception{
+		return scmservice.reservationOrder(businesscode);
+	}
+	
+	//예약 check condition변경
+	@Override
+	public int reservationCheck(String businesscode) throws Exception{
+		return scmservice.reservationCheck(businesscode);
+	}
+	
+	//예약 completion condition변경
+	@Override
+	public int reservationCompletion(String businesscode) throws Exception{
+		return scmservice.reservationCompletion(businesscode);
 	}
 	
 	// 리뷰 상세페이지
