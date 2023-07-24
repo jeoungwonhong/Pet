@@ -12,12 +12,20 @@ public interface SCMService {
 	//예약
 	public void reservation(ReservationVO reservation) throws Exception;
 	
-	//예약 condition 변경
-	public int reservationCon(int condition) throws Exception;
+	//order 페이지 목록
+	public int reservationOrder(String businesscode) throws Exception;
 	
-	// 리뷰 상세페이지
-	public ReviewVO info(Integer num) throws Exception;
+	//check 페이지 목록
+	public int reservationCheck(String businesscode) throws Exception;
+				
+	//completion 페이지 목록
+	public int reservationCompletion(String businesscode) throws Exception;
+		
 	
+
+    public List<ReviewVO> getList();
+
+
 	// 리뷰 리스트 
 	public List<ReviewVO> listAll() throws Exception;
 	
@@ -26,4 +34,5 @@ public interface SCMService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 }

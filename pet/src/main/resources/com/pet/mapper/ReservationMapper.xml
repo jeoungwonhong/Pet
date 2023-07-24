@@ -5,10 +5,19 @@
   <mapper namespace="com.pet.mapper.ReservationMapper">
   
   <insert id="reservation">
-  		insert into reservation values(#{num}, #{username}, #{pettype}, #{petweight}, #{petcount}, #{petinfo}, #{startdate}, #{enddate}, #{resdate}, #{price}, #{resnum}, 0)
+  		insert into reservation values(#{num}, #{username}, #{pettype}, #{petweight}, #{petcount}, #{petinfo}, #{startdate}, #{enddate}, #{resdate}, #{price}, #{resnum}, 0, #{businesscode})
   </insert>
 
-	<select id = "reservationCon" resultType = "int">
-		select count(*) from reservation where condition = ${condition}
+	<select id = "reservationOrder" resultType = "int">
+		select count(*) from reservation where businesscode = #{businesscode} and condition = 0 order by condition;
 	</select>
+	
+	<select id = "reservationCheck" resultType = "int">
+		select count(*) from reservation where businesscode = #{businesscode} and condition = 1 order by condition;
+	</select>
+	
+	<select id = "reservationCompletion" resultType = "int">
+		select count(*) from reservation where businesscode = #{businesscode} and condition = 2 order by condition;
+	</select>
+	
   </mapper>

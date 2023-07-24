@@ -7,8 +7,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+import com.pet.mapper.ReviewMapper;
+
 import com.pet.mapper.ScmCalculateMapper;
 import com.pet.model.PayVO;
+
 import com.pet.model.ReservationVO;
 import com.pet.model.ReviewVO;
 import com.pet.model.ScmCalculate;
@@ -21,26 +25,40 @@ public class SCMServicelmpl implements SCMService {
 	@Autowired
 	SCMService scmservice;
 	
+	@Autowired
+	ReviewMapper reMapper;
+	
 	//예약
 	@Override
 	public void reservation(ReservationVO reservation) throws Exception{
 		scmservice.reservation(reservation);
 	}
 	
-	//예약 condition변경
+	//예약 order condition변경
 	@Override
-	public int reservationCon(int condition) throws Exception{
-		return scmservice.reservationCon(condition);
+	public int reservationOrder(String businesscode) throws Exception{
+		return scmservice.reservationOrder(businesscode);
 	}
 	
-	// 리뷰 상세페이지
+	//예약 check condition변경
 	@Override
-    public ReviewVO info(Integer num) throws Exception {
-        return scmservice.info(num);
-    }
+	public int reservationCheck(String businesscode) throws Exception{
+		return scmservice.reservationCheck(businesscode);
+	}
 	
-	// 리뷰 리스트 
+	//예약 completion condition변경
 	@Override
+
+	public int reservationCompletion(String businesscode) throws Exception{
+		return scmservice.reservationCompletion(businesscode);
+	}
+
+	// 리뷰 목록
+	@Override
+	public List<ReviewVO> getList() {
+		return reMapper.getList();
+	}
+
 	public List<ReviewVO> listAll() throws Exception {
         return scmservice.listAll();
     }
@@ -52,4 +70,5 @@ public class SCMServicelmpl implements SCMService {
 		return ScmCalculateMapper.scmCalGetList(cal);
 	}
     
+
 }

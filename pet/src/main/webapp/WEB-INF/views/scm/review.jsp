@@ -48,7 +48,7 @@
                             <button name="filterDate" value="2">일주일</button>
                             <button name="filterDate" value="3">3개월</button>
                             <button name="filterDate" value="4">6개월</button>
-                            <button style="border-radius: 10px; font-size: 20px; background-color: #f3e3d0;">검색</button>
+                            <button style="border-radius: 10px; font-size: 20px; background-color: #F27405">검색</button>
                         </div>
                     </div>
                     <div class="row">
@@ -62,15 +62,17 @@
                                     <th>조회</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="list">1</td>
-                                    <td class="list">000</td>
-                                    <td class="list"><a href="/scm/review2">0000</a></td>
-                                    <td class="list">2023.04.20</td>
-                                    <td class="list">0</td>
-                                </tr>
-                        </tbody>
+                            <c:forEach items="${list}" var=list>
+					            <tr>
+					            	<a href="/scm/review2">
+						                <td class="list"><c:out value="${list.num}"/></td>
+						                <td class="list"><c:out value="${list.userid}"/></td>
+						                <td class="list"><c:out value="${list.subject}"/></td>
+						                <td class="list"><c:out value="${list.wdate}"/></td>
+						                <td class="list"><c:out value="${list.star}"/></td>
+					                </a>
+					            </tr>
+					        </c:forEach>
                         </table>
                     </div> <!-- /row -->
             </div>
