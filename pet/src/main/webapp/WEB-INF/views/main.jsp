@@ -12,7 +12,7 @@
 <!-- 로그인 하지 않은 상태 -->
 <c:if test="${member == null }">
 <span><a href="/member/login">로그인</a></span>
-<span><a href="/member/join">회원가입</a></span>
+<span><a href="/member/joinagree">회원가입</a></span>
 </c:if>
 
 <!-- 로그인 한 상태 -->
@@ -20,5 +20,7 @@
 	<span>${member.userid}님 반갑습니다.</span>
 	<span><a href="/member/logout.do">로그아웃</a></span>
 </c:if>
+
+
 </body>
 </html>
