@@ -13,7 +13,7 @@ a{
     color: #888;
 }
 .container{
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -59,6 +59,12 @@ a{
     .bee-password i{
         bottom: 10px;
         left: 150px;
+    }
+    .login-container{
+        width: 500px;
+    }
+    .p-login{
+   	 	margin:100px 0;
     }
 }
 
