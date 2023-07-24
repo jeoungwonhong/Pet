@@ -21,14 +21,10 @@ public interface SCMService {
 	//completion 페이지 목록
 	public int reservationCompletion(String businesscode) throws Exception;
 		
-	
-
+	// 리뷰 리스트 
     public List<ReviewVO> getList();
 
 
-	// 리뷰 리스트 
-	public List<ReviewVO> listAll() throws Exception;
-	
 	// 정산 관리 리스트
 	public static List<PayVO> scmCalGetList(ScmCalculate cal) throws Exception {
 		// TODO Auto-generated method stub
