@@ -19,9 +19,7 @@ public interface SCMService {
 	//completion 페이지 목록
 	public int reservationCompletion(String businesscode) throws Exception;
 		
-	// 리뷰 상세페이지
-	public ReviewVO info(Integer num) throws Exception;
 	
-	// 리뷰 리스트 
-	public List<ReviewVO> listAll() throws Exception;
+    public List<ReviewVO> getList();
+
 }
