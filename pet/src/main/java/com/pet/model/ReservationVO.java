@@ -8,12 +8,14 @@ public class ReservationVO {
 	private double petweight;
 	private int petcount;
 	private String petinfo;
+	private String roomname;
 	private String startdate;
 	private String enddate;
 	private String resdate;
 	private int price;
 	private int resnum;
 	private int condition;
+	private String businesscode;
 	
 	
 	public int getNum() {
@@ -52,6 +54,12 @@ public class ReservationVO {
 	public void setPetinfo(String petinfo) {
 		this.petinfo = petinfo;
 	}
+	public String getRoomname() {
+		return roomname;
+	}
+	public void setRoomname(String roomname) {
+		this.roomname = roomname;
+	}
 	public String getStartdate() {
 		return startdate;
 	}
@@ -88,16 +96,21 @@ public class ReservationVO {
 	public void setCondition(int condition) {
 		this.condition = condition;
 	}
-	
+	public String getBusinesscode() {
+		return businesscode;
+	}
+	public void setBusinesscode(String businesscode) {
+		this.businesscode = businesscode;
+	}
 	
 	@Override
 	public String toString() {
 		return "ReservationVO [num=" + num + ", username=" + username + ", pettype=" + pettype + ", petweight="
-				+ petweight + ", petcount=" + petcount + ", petinfo=" + petinfo + ", startdate=" + startdate
-				+ ", enddate=" + enddate + ", resdate=" + resdate + ", price=" + price + ", resnum=" + resnum
-				+ ", condition=" + condition + "]";
+				+ petweight + ", petcount=" + petcount + ", petinfo=" + petinfo + ", roomname=" + roomname
+				+ ", startdate=" + startdate + ", enddate=" + enddate + ", resdate=" + resdate + ", price=" + price
+				+ ", resnum=" + resnum + ", condition=" + condition + ", businesscode=" + businesscode + "]";
 	}
-	
+		
 	
 
 	
