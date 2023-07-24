@@ -58,10 +58,6 @@ public class SCMServicelmpl implements SCMService {
 	public List<ReviewVO> getList() {
 		return reMapper.getList();
 	}
-
-	public List<ReviewVO> listAll() throws Exception {
-        return scmservice.listAll();
-    }
 	
 	// 정산관리 리스트
 	public List<PayVO> scmCalGetList(ScmCalculate cal) throws Exception{
