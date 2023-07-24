@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +56,7 @@
                     </div>
                     <div class="row">
                         <table class="table  memberstbl">
-                            <thead>
+                             <thead>
                                 <tr>
                                     <th>번호</th>
                                     <th>예약자명</th>
@@ -62,26 +65,52 @@
                                     <th>동물 수</th>
                                     <th>동물 정보</th>
                                     <th>룸 이름</th>
+                                    <th>예약일시</th>
                                     <th>체크인</th>
                                     <th>체크아웃</th>
                                     <th>금액</th>
+                                    
+            
                                 </tr>
                             </thead>
-                            <tbody>
-                
+       
+       <c:choose>
+           <c:when test="${empty reservationCompletion }">
+                    <tbody>
+	                	<tr>
+	            	    	<td>예약이없어용</td>
+	                	</tr>
+                	</tbody>
+           </c:when>
+                	
+           <c:otherwise>
+            <c:forEach var = "re" items ="${reservationCompletion }">
+                <tbody>
                     <tr>
-                        <td>1</td>
-                        <td>윤베리</td>
-                        <td>크레스티드게코</td>
-                        <td>54g</td>
-                        <td>1마리</td>
-                        <td>벽을 타고 다녀요</td>
-                        <td>은비네 유리사육장</td>
-                        <td></td>
-                        <td></td>
-                        <td>300,000원</td>
-                    </tr>
-                        </tbody>   
+                        <td>${re.num }</td>
+                        <td>${re.username }</td>
+                        <td>${re.pettype }</td>
+                        <td>${re.petweight }</td>
+                        <td>${re.petcount }마리</td>
+                        <td>${re.petinfo }</td>
+                        <td>${re.roomname }</td>
+                        <td>${re.resdate }</td>
+                        <td>${re.startdate }</td>
+                        <td>${re.enddate }</td>
+                        <td>${re.price }원</td>
+                        <td>
+                            <select name="level" class="level" onchange="memAddr(this, );">
+                                <option value="0" >미승인</option>
+                                <option value="1"  >승인</option> 
+                            </select>
+                            
+                        </td>
+                   </tr>
+                 </tbody>  
+              </c:forEach> 
+             </c:otherwise>
+        </c:choose>
+        
                         </table>
                     </div> <!-- /row -->
                     <div class="mt-3 mb-5 row ">
