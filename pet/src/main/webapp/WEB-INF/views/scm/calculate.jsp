@@ -48,7 +48,7 @@
                             <button name="filterDate" value="2">일주일</button>
                             <button name="filterDate" value="3">3개월</button>
                             <button name="filterDate" value="4">6개월</button>
-                            <button style="border-radius: 10px; font-size: 20px; background-color: #f3e3d0;">검색</button>
+                            <button style="border-radius: 10px; font-size: 20px; background-color: #F27405;">검색</button>
                         </div>
                     </div>
                     <div class="row">

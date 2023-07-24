@@ -74,11 +74,7 @@
 									<input type = "hidden" name = "readcount" id="readcount" />
 									<input type = "hidden" name = "replycount" id="replycount"/>
 									<input type = "hidden" name = "like" id="like" />
-								<button type="button" class="btn btn-sm b-qna-btn" onclick="">수정</button>
-								<button type="button" class="btn btn-sm b-qna-btn" onclick="">삭제</button>
-				
-								<a type="button" class="btn btn-sm b-qna-btn" id="btnList" onclick="return confirm('관리자 권한으로 삭제하시겠습니까?')" href="">관리자 권한으로 삭제</a>
-				
+								<button type="button" class="btn btn-sm b-qna-btn" onclick="">신고</button>
 							</div>
 				
 						
