@@ -1,12 +1,16 @@
 package com.pet.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.pet.model.ScmCalculate;
 import com.pet.service.SCMService;
 
 /**
@@ -36,8 +40,13 @@ public class SCMController {
 	
 	//calculate 페이지 이동
 	@RequestMapping(value = "calculate", method = RequestMethod.GET)
-	public void CalculateGET() {
-		logger.info("calculate");
+	public void CalculateGET(ScmCalculate cal, Model model) throws Exception {
+		logger.info("calculate 접속......." + cal);
+		
+		/* 목록 출력 데이터 */
+		List list = SCMService.scmCalGetList(cal);
+		
+		model.addAttribute("list", list);
 	}
 	
 	//product 페이지 이동
