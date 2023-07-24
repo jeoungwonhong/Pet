@@ -46,7 +46,7 @@ $("#loginform").submit();
         <div><span>PW : </span><input type="password" name="userpass"/></div>
         <div>
         	<div>
-        		<input type="checkbox" id="customCheck" value="true" ${checked }/>
+        		<input type="checkbox" id="customCheck" value="true" ${checked}/>
         		<label for="customCheck">Remember Me</label>
         	</div>
         </div>
