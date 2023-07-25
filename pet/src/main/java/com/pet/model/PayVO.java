@@ -1,3 +1,4 @@
+
 package com.pet.model;
 
 public class PayVO {
@@ -11,6 +12,9 @@ public class PayVO {
 	private String enddate;
 	private String resdate;
 	private int price;
+	private int resnum;
+	private String businesscode;
+	private String roomname;
 	
 	
 	public int getNum() {
@@ -66,6 +70,24 @@ public class PayVO {
 	}
 	public void setPrice(int price) {
 		this.price = price;
+	}	
+	public int getResnum() {
+		return resnum;
+	}
+	public void setResnum(int resnum) {
+		this.resnum = resnum;
+	}
+	public String getBusinesscode() {
+		return businesscode;
+	}
+	public void setBusinesscode(String businesscode) {
+		this.businesscode = businesscode;
+	}
+	public String getRoomname() {
+		return roomname;
+	}
+	public void setRoomname(String roomname) {
+		this.roomname = roomname;
 	}
 	
 	
@@ -73,6 +95,10 @@ public class PayVO {
 	public String toString() {
 		return "PayVO [num=" + num + ", username=" + username + ", pettype=" + pettype + ", petweight=" + petweight
 				+ ", petcount=" + petcount + ", startdate=" + startdate + ", enddate=" + enddate + ", resdate="
-				+ resdate + ", price=" + price + "]";
+				+ resdate + ", price=" + price + ", resnum=" + resnum + ", businesscode=" + businesscode + ", roomname="
+				+ roomname + "]";
 	}
+	
+	
+
 }
