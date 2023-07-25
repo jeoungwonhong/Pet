@@ -30,5 +30,17 @@ public class MemberServiceImpl implements MemberService{
 		return membermapper.idCheck(userid);
 	}
 	
+	//아이디 찾기
+	@Override
+	public MemberVO memberIdSearch(MemberVO searchVO) {
+		return membermapper.memberIdSearch(searchVO);
+	}
+	
+	//비밀번호 찾기
+	@Override
+	public MemberVO memberPwdSearch(MemberVO searchVO) {
+		return membermapper.memberPwdSearch(searchVO);
+	}
+	
 	
 }

@@ -12,5 +12,11 @@ public interface MemberMapper {
 
 	// 아이디 중복 검사
 		public int idCheck(String userid);
+	
+	// 아이디 찾기
+		MemberVO memberIdSearch(MemberVO searchVO);
+		
+	// 비밀번호 찾기
+		MemberVO memberPwdSearch(MemberVO searchVO);
 }
 

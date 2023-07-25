@@ -18,7 +18,7 @@
 <!-- 로그인 한 상태 -->
 <c:if test="${member != null }">
 	<span>${member.userid}님 반갑습니다.</span>
-	<span><a href="/member/logout.do">로그아웃</a></span>
+	<span><a href="/member/logout">로그아웃</a></span>
 </c:if>
 
 
