@@ -1,8 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>                                                                                                          
+<script type="text/javascript">                                                                                                                                                                                                                                                                                                                                                                 
+$("#loginform").submit();       
+	/* alert("전송"); */
+	
+	}                                                                                                                                                                                                 
+</script>  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,15 +35,18 @@
         <img class="login-banner" src="/resources/img/login-banner.png" alt="banner" style="margin-left: -7px;">
         <div class="p-login">
             <h1>로그인</h1>
-            <form class="login-conta" id="loginForm" method="post">
+            <form class="login-conta" id="loginform" action="/member/login" method="post">
+            	<c:if test="${not empty cookie.user_check}">
+            		<c:set value="checked" var="checked"/>
+            	</c:if>
                 <div class="login-id" style="position: relative;margin-bottom: 10px;margin-left: 28px;">
                 <span id="span11" style="display: none;">아이디</span>
                 <label for="username">
-                 <input class="bee-username" type="text" id="username" name="userid" required  placeholder="아이디" oninput="login()"></label>
+                 <input class="bee-username" type="text" id="username" name="userid" value="${cookie.user_check.value}" required  placeholder="아이디" oninput="login()"></label>
                 </div>
                  <div class="login-pass" style="position: relative; display: inline-block;">
                     <span id="span1" style="display: none;">비밀번호</span>
-                    <input class="bee-password" type="password" id="password" name="password" required  placeholder="비밀번호" oninput="pass()">
+                    <input class="bee-password" type="password" id="password" name="userpass" required  placeholder="비밀번호" oninput="pass()">
                     <i class= "fa-regular fa-eye" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%); cursor: pointer;"></i>
                   </div>
                   
@@ -45,7 +56,7 @@
                 <div class="huid-container" style="display: flex;width: 345px;margin-left: 27px;margin-top: 5px;">
                 <label class="huid">
                     <div class="huid-s">
-                <input type="checkbox" name="huid" id="huid" value="ok"/> <span id="huid-span" style="font-size: 13px;">아이디 저장</span>
+                <input type="checkbox" name="remember_userid" id="huid" ${checked} value="ok"/> <span id="huid-span" style="font-size: 13px;">아이디 저장</span>
                     </div> 
                 </label>
                 <div class="text-end">
@@ -66,5 +77,6 @@
             </form>
         </div>
     </div>
+    
 </body>
 </html>
