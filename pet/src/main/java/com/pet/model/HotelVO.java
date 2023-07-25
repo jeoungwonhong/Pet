@@ -10,6 +10,7 @@ public class HotelVO {
 	private String businesscode;
 	private String username;
 	private String hotelinfo;
+	private String hotelimg;
 	
 	
 	public String getHotelname() {
@@ -60,12 +61,22 @@ public class HotelVO {
 	public void setHotelinfo(String hotelinfo) {
 		this.hotelinfo = hotelinfo;
 	}
-	
+		
+	public String getHotelimg() {
+		return hotelimg;
+	}
+	public void setHotelimg(String hotelimg) {
+		this.hotelimg = hotelimg;
+	}
 	
 	@Override
 	public String toString() {
 		return "HotelVO [hotelname=" + hotelname + ", hotelcode=" + hotelcode + ", hoteladdr=" + hoteladdr
 				+ ", hoteldetailaddr=" + hoteldetailaddr + ", hoteltel=" + hoteltel + ", businesscode=" + businesscode
-				+ ", username=" + username + ", hotelinfo=" + hotelinfo + "]";
+				+ ", username=" + username + ", hotelinfo=" + hotelinfo + ", hotelimg=" + hotelimg + "]";
 	}
+	
+	
+	
+	
 }
