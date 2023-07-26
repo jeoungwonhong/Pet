@@ -12,6 +12,7 @@ public class ReviewVO {
 	private int star;
 	private int rvnum;
 	private String wdate;
+	private int accuse;
 	
 	
 	public int getNum() {
@@ -73,16 +74,21 @@ public class ReviewVO {
 	}
 	public void setWdate(String wdate) {
 		this.wdate = wdate;
+	}	
+	public int getAccuse() {
+		return accuse;
 	}
-	
+	public void setAccuse(int accuse) {
+		this.accuse = accuse;
+	}
 	
 	@Override
 	public String toString() {
 		return "ReviewVO [num=" + num + ", userid=" + userid + ", userpass=" + userpass + ", img=" + img + ", subject="
 				+ subject + ", content=" + content + ", resnum=" + resnum + ", star=" + star + ", rvnum=" + rvnum
-				+ ", wdate=" + wdate + "]";
+				+ ", wdate=" + wdate + ", accuse=" + accuse + "]";
 	}
 	
-	
+		
 	
 }

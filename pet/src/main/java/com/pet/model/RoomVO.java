@@ -1,13 +1,22 @@
 package com.pet.model;
 
 public class RoomVO {
-
+	
+	private int num;
 	private String hotelname;
 	private String roomcode;
 	private String roomname;
 	private int roomprice;
 	private String roominfo;
 	private int petweight;
+	
+	
+	public int getNum() {
+		return num;
+	}
+	public void setNum(int num) {
+		this.num = num;
+	}
 	public String getHotelname() {
 		return hotelname;
 	}
@@ -45,11 +54,10 @@ public class RoomVO {
 		this.petweight = petweight;
 	}
 	
-	
 	@Override
 	public String toString() {
-		return "RoomVO [hotelname=" + hotelname + ", roomcode=" + roomcode + ", roomname=" + roomname + ", roomprice="
-				+ roomprice + ", roominfo=" + roominfo + ", petweight=" + petweight + "]";
+		return "RoomVO [num=" + num + ", hotelname=" + hotelname + ", roomcode=" + roomcode + ", roomname=" + roomname
+				+ ", roomprice=" + roomprice + ", roominfo=" + roominfo + ", petweight=" + petweight + "]";
 	}
 	
 	
