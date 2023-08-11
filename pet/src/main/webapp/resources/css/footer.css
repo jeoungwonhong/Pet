@@ -1,0 +1,115 @@
+*{box-sizing: border-box;}
+/* footer */
+footer{
+  width: 100%;
+  height: 200px;
+  background-color: #F27405;
+  border-top-left-radius: 70px;
+}
+.b_footer{
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  display: flex;
+  padding-top: 40px;
+}
+.b_footer>img{
+  width: 66px;
+  height: 60px;
+}
+.b_footer_content{
+  margin-left: 80px;
+}
+.b_footer_content_title{
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.b_footer_content_detailbox1,
+.b_footer_content_detailbox2{
+  color: #FFF;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.b_footer_content_detailbox1>span,
+.b_footer_content_detailbox2>span{
+  margin-right: 30px;
+
+}
+.b_footer_content_detail2{
+  margin-top: 6px;
+}
+.b_footer_content_detailbox3{
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+.b_footer_content_detail2>p{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 모바일 */
+@media (max-width: 500px) {
+  /* 헤더 */
+  .p-logo{
+      display: none;
+  }
+  .m-logo{
+      display: block;
+      width: 40px;
+  }
+  .login{
+      margin-top: 10px;
+      display: none;
+  }
+  .m-login{
+      display: block;
+  }
+  .m-login img{
+      width: 35px;
+      height: 35px;
+  }
+  /* 헤더 */
+  /* 예약 */
+  .b-appointment{
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  #mainreservationForm{
+    display: block;
+  }
+  .reservation input{
+    margin-bottom:8px;
+  }
+  #mainlocation{
+    width: 400px;
+  }
+  #maincheck{
+    width: 400px;
+  }
+  .p-date{
+    display: flex;
+  }
+  #maindogSize{
+    width: 400px;
+  }
+  #maincheckInDate,
+  #maincheckOutDate{
+    width: 200px;
+  }
+  #mainbtn{
+    width: 400px;
+    height: 64px;
+    background-color: #F27405;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    margin-left: 0;
+  }
+  /* 예약 */
+}
