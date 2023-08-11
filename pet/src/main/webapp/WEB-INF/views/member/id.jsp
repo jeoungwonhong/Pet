@@ -13,17 +13,7 @@
     <script src="/resources/js/login.js"></script>
 </head>
 <body>
-    <header>
-        <img src="/resourcesimg/petlogo.png" alt="logo" class="p-logo">
-        <img src="/resourcesimg/mlogo.png" alt="mlogo" class="m-logo">
-        <div class="login">
-            <a href="#">로그인</a>
-            <a href="#">회원가입</a>
-        </div>
-        <div class="m-login">
-            <img src="/resourcesimg/user.png" alt="사용자">
-        </div>
-    </header>
+     <%@include file="../includes/header.jsp" %>
     <div class="login-container">
         <img class="login-banner" src="/resourcesimg/login-banner.png" alt="banner" style="margin-left: -7px;">
         <div class="p-login">

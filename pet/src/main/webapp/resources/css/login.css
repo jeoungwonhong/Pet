@@ -1,13 +1,5 @@
 *{box-sizing: border-box;}
 
-header{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 a{
     text-decoration: none;
     color: #888;
@@ -17,7 +9,7 @@ a{
     margin: 0 auto;
     padding: 20px;
 }
-
+/* 
 .p-logo{
     width: 150px;
     height: auto;
@@ -42,7 +34,7 @@ a{
 }
 .m-login{display: none;}
 
-/* 모바일 */
+모바일
 @media (max-width: 500px) {
     .p-logo{
         display: none;
@@ -62,7 +54,7 @@ a{
         width: 35px;
         height: 35px;
     }
-    /**login**/
+    *login*
     .login-banner{
         display: none;
     }
@@ -76,7 +68,7 @@ a{
     .p-login{
    	 	margin:100px 0;
     }
-}
+} */
 
 /*login**/
 .login-container{
