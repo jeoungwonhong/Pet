@@ -1,0 +1,248 @@
+@charset "UTF-8";
+body{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.container{
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+.choi-search-box{
+    width: 1100px;
+    display: flex;
+}
+.choi-search-area{
+    border-radius: 12px;
+    border: 1px solid #d0d0cf;
+    width: 260px;
+    height: 64px;
+    line-height: 64px;
+    margin-right: 20px;
+    display: flex; 
+}
+.choi-search-area input{
+    border: none;
+    text-align: center;
+
+}
+.choi-search-area img{
+    margin: 19px 20px 19px 24px;
+}
+.choi-date-box{
+    display: flex;
+    width: 420px;
+    height: 64px;
+    border-radius: 12px;
+    border: 1px solid #d0d0cf;
+}
+.choi-date-left{
+    display: flex;
+}
+.choi-date-right{
+    display: flex;
+}
+.choi-date-box-img img{
+    margin: 14px 15px 14px 20px;
+}
+.choi-date-box-text{
+    width: 119px;
+    height: 39px;
+    margin-right: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.choi-date-box-text p{
+    color: #131211;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+}
+.choi-date-box-text span{
+    color: #a1a0a0;
+    font-size: 13px;
+}
+.choi-date-middel-line{
+    border-left: 1px solid #d0d0cf;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+}
+.choi-pet-box{
+    border-radius: 12px;
+    border: 1px solid #d0d0cf;
+    width: 260px;
+    height: 64px;
+    line-height: 64px;
+    margin-right: 20px;
+    display: flex; 
+    margin-left: 20px;
+}
+.choi-pet-box img{
+    width: 36px;
+    height: 36px;
+    margin: 14px 20px;
+}
+.choi-pet-box-text{
+    display: flex;
+    margin-bottom: 22px;
+    width: 104px;
+    margin-right: 10px;;
+}
+.choi-pet-box-text p{
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
+}
+.choi-pet-down img{
+    margin : 8px 10px;
+    width: 48px;
+    height: 48px;
+}
+.choi-btn-search{
+    width: 102px;
+    height: 62px;
+    border-radius: 12px;
+    color: #fff;
+    background-color: #f27405;
+}
+.choi-btn-search-box{
+    margin: 20px;
+    display: flex;
+}
+.choi-btn-search-box p{
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+.choi-btn-search-box i{
+    margin-right: 10px;
+}
+
+/* 슬라이드 */
+.choi-slide-box{
+    margin-top: 20px;
+    width: 101%;
+}
+.choi-slide-img-box{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 100%;
+}
+.choi-slide-img-box a img{
+    width: 1100px;
+    margin-right: 40px;
+    border-radius: 12px;
+    position: relative;
+}
+/* 슬라이드버튼 */
+.choi-slide-btn{
+    display: flex;
+    margin-top: 2px;
+}
+.choi-pagination, .choi-pagination li{
+    list-style-type: none;
+}
+.choi-slide-btn-box{
+    display: flex;
+}
+.choi-pagination{
+    display: flex;
+    width: 976px;
+    background-color: #E0E0E0;
+}
+.choi-pagination li{
+    width: 195px;
+    height: 4px;
+}
+.choi-pagination .active{
+    background-color: #f27405;
+    width: 195px;
+}
+.choi-slide-btn-box p{
+    margin: 0;
+}
+
+/* 호텔 순위  */
+.choi-hotel-part{
+    margin-top: 60px;
+    height: auto;
+    height: 744px;
+}
+.choi-hotel-title{
+    display: flex;
+    justify-content: space-between;
+}
+.choi-hotel-title p{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.choi-hotel-popular-box{
+    width: 260px;
+    height: 294px;
+}
+.choi-hotel-img{
+    border-radius: 8px;
+    width: 260px;
+    height: 180px;
+    position: relative;
+    z-index: 1;
+}
+.choi-hotel-heart{
+    z-index: 3;
+    position: absolute;
+    margin: 5px -31px;
+}
+.choi-hotel-text-box{
+    width: 260px;
+    display: flex;
+}
+.choi-hotel-num{
+    width: 21px;
+    height: 46px;
+    margin-right: 20px;
+}
+.choi-hotel-num p{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    height: inherit;
+}
+.choi-hotel-text{
+    margin-top: 12px;
+}
+.choi-hotel-text p{
+    margin: 0;
+    margin-bottom: 6px;
+}
+.choi-text-name{
+    font-size: 18px;
+    font-weight: bold;
+}
+.choi-text-addr{
+    font-size: 14px;
+}
+.choi-hotel-text span{
+    color: #a1a0a0;
+    font-size: 14px;
+}
+.choi-hotel-price{
+    margin-top: 5px;
+}
+.choi-hotel-price p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+}
+.choi-hotel-reservation{
+    margin-top: 60px;
+    height: auto;
+}
+.choi-hotel-list{
+    margin-top: 80px;
+    height: auto;
+}
