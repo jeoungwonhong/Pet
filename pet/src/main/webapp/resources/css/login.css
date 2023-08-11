@@ -30,6 +30,16 @@ a{
     gap: 10px;
     margin-top: 5px;
 }
+.h-login{
+    width: 91px;
+    height: 31px;
+    border: 1px solid #424141;
+    text-align: center;
+    line-height: 2;
+    border-radius: 7px;
+    margin-top: -7px;
+    margin-left: 7px;
+}
 .m-login{display: none;}
 
 /* 모바일 */
@@ -194,7 +204,7 @@ a{
 
 /****************consent**********************/
 .p-con{
-    width: 345px;
+    width: 350px;
     height: 425px;
     margin: 130px auto;
 
@@ -246,4 +256,43 @@ a{
     border: none;
     border-radius: 13px;
     cursor: not-allowed;
+}
+
+/********회원가입완료*******/
+.succ img{
+    width: 400px;
+    margin-left: -30px;
+}
+.succ-1{
+    font-size: 30px;
+    padding-left: 100px;
+    margin-top: -20px;
+}
+.succ-btn,
+.succ-btn1{
+    width: 102px;
+    height: 42px;
+    text-align: center;
+    font-size: 15px;
+}
+.succ-button{
+    text-align: center;
+    margin-top: 70px;
+}
+.succ-btn{
+    margin-right: 20px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    background-color: #fff;
+}
+.succ-btn1{
+    border-radius: 7px;
+    color: #fff;
+    background-color: #F27405;
+    border: 1px solid #F27405;
+}
+
+/******회원가입******/
+.f-join{
+    margin-top: -20px;
 }
