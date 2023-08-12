@@ -20,4 +20,11 @@ public interface MemberService {
 	
 	// 비밀번호 찾기
 	MemberVO memberPwdSearch(MemberVO searchVO);
+	
+	//구글로그인
+	public MemberVO loginMemberbyGoogle(MemberVO member);
+	
+	//구글회원가입
+	public void joinMemberbyGoogle(MemberVO member);
+	
 }

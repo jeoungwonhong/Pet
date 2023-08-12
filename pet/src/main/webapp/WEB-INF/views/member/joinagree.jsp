@@ -13,19 +13,9 @@
     <script src="/resources/js/login.js"></script>
 </head>
 <body>
-    <header>
-        <img src="./img/petlogo.png" alt="logo" class="p-logo">
-        <img src="./img/mlogo.png" alt="mlogo" class="m-logo">
-        <div class="login">
-            <a href="#">로그인</a>
-            <a href="#">회원가입</a>
-        </div>
-        <div class="m-login">
-            <img src="./img/user.png" alt="사용자">
-        </div>
-    </header>
+     <%@include file="../includes/header.jsp" %>
     <div class="login-container">
-        <img class="login-banner" src="./img/login-banner.png" alt="banner" style="margin-left: -7px;">
+        <img class="login-banner" src="/resources/img/login-banner.png" alt="banner" style="margin-left: -7px;">
         <div class="p-con">
             <h1>약관 동의</h1>
             <div class="p-consent-row">
@@ -60,12 +50,13 @@
                       <button class="bee-next-1" id="loginclick" type="submit" disabled="">다음</button>
                     <div class="b-next" >
                     <p>이미 가입된 계정이 있나요?</p>
-                        <a href="#">로그인</a>
+                        <a href="/member/login">로그인</a>
                 </div>
                </div>
             </div>
         </div>
         </div>
     </div>
+    <%@include file="../includes/footer.jsp" %>
 </body>
 </html>

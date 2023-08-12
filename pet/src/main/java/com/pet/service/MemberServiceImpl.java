@@ -42,5 +42,26 @@ public class MemberServiceImpl implements MemberService{
 		return membermapper.memberPwdSearch(searchVO);
 	}
 	
+	//구글 회원가입
+	@Override
+	public void joinMemberbyGoogle(MemberVO member) {
+		membermapper.memberJoin(member);
+	}
 	
+	//구글로그인
+	@Override
+	public MemberVO loginMemberbyGoogle(MemberVO member) {
+		return membermapper.memberLogin(member);
+	}
+	/*
+	 * //구글 로그인
+	 * 
+	 * @Override public MemberVO loginMemberbyGoogle(MemberVO member) {
+	 * 
+	 * try {
+	 * 
+	 * } catch (Exception e) { e.printStackTrace();
+	 * 
+	 * // TODO: handle exception } }
+	 */
 }

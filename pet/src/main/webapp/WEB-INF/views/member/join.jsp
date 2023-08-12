@@ -38,6 +38,7 @@ text-align:center;
   </style>
 </head>
 <body>
+ <%@include file="../includes/header.jsp" %>
 <!-- 여기 쓰여져있는 class들 다 기능에 필요해서 사용중이니 디자인은 다른 class를 사용해서 만들어주세요 바꾸시면 절대 안됩니다 -->
 <!-- 간격이 없으면 깜빡거려요 간격이 조금 필요합니다 -->
 <div>
@@ -126,5 +127,6 @@ text-align:center;
 <script>
 
 </script>
-</body>
+</body>     
+<%@include file="../includes/footer.jsp" %>
 </html>
