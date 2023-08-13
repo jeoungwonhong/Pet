@@ -13,12 +13,14 @@
   <style>
 /* 기본 버튼 스타일 제거 */
 .button-back{
-	width: 200px;
-	height: 50px;
-	border-radius: 15px;
-	display: inline-block;
-	background: orange;	
-}
+            width: 345px;
+            height: 52px;
+            border-radius: 15px;
+            display: inline-block;
+            background: orange;	
+            text-align: center;
+            line-height: 3.5;
+        }
 .join_button {
 text-align:center;
     background: none;
@@ -35,6 +37,14 @@ text-align:center;
     color: grey; /* 버튼이 비활성화된 경우 색상을 설정하세요 */
     cursor: not-allowed; /* 비활성화된 버튼에 마우스 커서 스타일 변경 */
 }
+ .nbtn{
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            background: #ededed;
+            border: none;
+            border-radius: 4px;
+        }
   </style>
 </head>
 <body>
@@ -101,14 +111,14 @@ text-align:center;
 				<div>휴대폰</div>
 				<div>
 					<input class="tel_input" name="tel" id="tel" onkeyup="checkTel()">
-					<button type="button" onclick="sendVerificationCode()">인증번호 발송</button>
+					<button type="button" onclick="sendVerificationCode()" class="nbtn">인증번호 발송</button>
 				</div>
 				<span class="check_tel" style="display: none;">번호를 입력해주세요.</span>
 				<span class="final_tel_ck" style="display: none;">번호를 입력해주세요.</span>
 				<span class="codemessege" style="display: none;"></span>
 			</div>
         
-			<div style="height:100px;">
+			<div style="height:100px; margin-top: 10px;">
 				<div>인증번호</div>
 				<div>
 					<input class="verification_code_input" name="verification_code" id="verification_code" onkeyup="verifyVerificationCode()">
