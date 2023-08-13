@@ -14,9 +14,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="/resources/css/SearchIdPw.css">
 </head>
 <body>
-<h1>비밀번호 찾기</h1>
+ <%@include file="../includes/header.jsp" %>
+ <div class="search-container">
+        <img class="login-banner" src="/resources/img/login-banner.png" alt="banner" style="margin-left: -7px;">
+        <div class="s-id">
+<h1>${searchVO.userid}님의 비밀번호입니다.</h1>
+<div class="rs">
 <c:choose>
 	<c:when test="${empty searchVO}">
 		<p>조회 결과가 없습니다.</p>
@@ -25,12 +31,15 @@
 		<p>${searchVO.userpass}</p>
 	</c:otherwise>
 </c:choose>
-	<div>
-		<a href="/member/search_pwd">PW 다시찾기</a>
+</div>
+	<div class="bee-login-2">
+		<a href="/member/login">로그인</a>
 	</div>
-	<div>
-		<a href="/member/login">로그인하기</a>
+	<div class="do-go">
+		<a href="/member/search_pwd">비밀번호찾기</a>
 	</div>
-
+	</div>
+</div>
+<%@include file="../includes/footer.jsp" %>
 </body>
 </html>

@@ -43,8 +43,6 @@
   			where
   				userid = #{userid}
   			and
-  				username = #{username}
-  			and
   				tel = #{tel}
   			
   		]]>

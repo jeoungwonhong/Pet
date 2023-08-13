@@ -22,11 +22,21 @@
 			return false;
 		} */
 		
-		if(confirm("아이디를 찾으시겠습니까?")){
-			$("#createForm").submit();
-			
-			return false;
+		if($("#username").val() == '' || $("#tel").val() == ''){
+			$(".do-id").css("display","inline-block");
+			$(".do-te").css("display","inline-block");
+		}else{
+			$(".do-id").css("display","none");
+			$(".do-te").css("display","none");
+			if(confirm("아이디를 찾으시겠습니까?")){
+				$("#createForm").submit();
+				
+				return false;
+			}
 		}
+		
+		
+		
 	}
 	
 </script>
@@ -34,25 +44,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="/resources/css/SearchIdPw.css">
 </head>
 <body>
-<form commandName="searchVO" id="createForm" action="${path}/member/search_result_id" method="post">
-<h1>아이디 찾기</h1>
+ <%@include file="../includes/header.jsp" %>
+ <div class="search-container">
+        <img class="login-banner" src="/resources/img/login-banner.png" alt="banner" style="margin-left: -7px;">
+        <div class="s-id">
+        <h1>아이디 찾기</h1>
+	<form  class="login-conta" commandName="searchVO" id="createForm" action="${path}/member/search_result_id" method="post">
 
-	<div>
-		<input type="text" id="username" name="username" placeholder="이름">
+	<div class="login-id" style="position: relative;margin-bottom: 10px;margin-left: 28px;">
+		<input class="bee-username" type="text" id="username" name="username" placeholder="이름">
+	</div>
+	<div class="do-id">이름을 입력해주세요</div>
+	
+	<div class="login-pass" style="position: relative; display: inline-block;">
+	<input class="bee-password" type="text" id="tel" name="tel" placeholder="010-0000-0000">
+	</div>
+	<div class="do-te">전화번호를 입력해주세요</div>
+	<div class="bee-login-1">
+	<a href="javascript:void(0)" onclick="fnSubmit(); return false;" >아이디 찾기</a>
 	</div>
 	
-	<div>
-	<input type="text" id="tel" name="tel" placeholder="010-0000-0000">
-	</div>
-	
-	<a href="javascript:void(0)" onclick="fnSubmit(); return false;">아이디 찾기</a>
-	
-	<div>
+	<div class="do-go">
 		<a href="/member/login">로그인하기</a>
 	</div>
 </form>
-
+</div>
+</div>
+<%@include file="../includes/footer.jsp" %>
 </body>
 </html>

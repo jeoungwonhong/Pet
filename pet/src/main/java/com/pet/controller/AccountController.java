@@ -53,12 +53,10 @@ public class AccountController {
 	@RequestMapping(value="/member/search_result_pwd")
 	public String search_result_pwd(HttpServletRequest request, Model model,
 			@RequestParam(required = true, value = "userid") String userid,
-			@RequestParam(required = true, value = "username") String username,
 			@RequestParam(required = true, value = "tel") String tel,
 			MemberVO searchVO){
 		try {
 			searchVO.setUserid(userid);
-			searchVO.setUsername(username);
 			searchVO.setTel(tel);
 			MemberVO memberSearch = memberservice.memberPwdSearch(searchVO);
 			
