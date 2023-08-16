@@ -152,9 +152,16 @@ $(document).on("click",".agree-content1",function(){
       nextButton.style.cursor = areRequiredCheckboxesChecked() ? "pointer" : "not-allowed";
     }
 
+     function navigateToJoinPage() {
+        if (areRequiredCheckboxesChecked()) {
+            window.location.href = "/member/join";
+        }
+    }
     
     agreeAllCheckbox.addEventListener("change", updateNextButtonState);
     agreeContent1Checkbox.addEventListener("change", updateNextButtonState);
     agreeContent2Checkbox.addEventListener("change", updateNextButtonState);
     agreeContent3Checkbox.addEventListener("change", updateNextButtonState);
+  	
+  	nextButton.addEventListener("click", navigateToJoinPage);
   });

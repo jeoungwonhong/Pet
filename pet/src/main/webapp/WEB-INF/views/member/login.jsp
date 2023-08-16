@@ -54,7 +54,7 @@ $(function(){
                 <button class="bee-login-1" id="loginclick" type="button" onclick="LoginClick()">로그인</button>
                 <div class="b-regi" >
                 <p>아직 펫더랜드의 회원이 아니신가요?</p>
-                <a href="#">회원가입</a>
+                <a href="/member/joinagree">회원가입</a>
                 </div>
                 <div class="snslogin">
                     <a href="#"><img src="/resources/img/naver.png" alt="naver"></a>

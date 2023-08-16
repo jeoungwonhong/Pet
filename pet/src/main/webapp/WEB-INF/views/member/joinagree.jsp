@@ -47,7 +47,8 @@
                         <input type="checkbox" name="agree" value="6" class="agree-content6">
                         <span class="agree-text6">문자 수신 <strong class="select_disable"></strong></span>
                       </label>
-                      <button class="bee-next-1" id="loginclick" type="submit" disabled="">다음</button>
+                      <button class="bee-next-1" id="loginclick" onclick="navigateToJoinPage()" disabled="">다음</button>
+                      <!-- <button class="bee-next-1" id="loginclick" type="submit" disabled="">다음</button> -->
                     <div class="b-next" >
                     <p>이미 가입된 계정이 있나요?</p>
                         <a href="/member/login">로그인</a>
